@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRIntant2", "TRIntant2.csproj", "{DA6A86D9-4C05-4AFD-BE2D-12BE3DB55A7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA6A86D9-4C05-4AFD-BE2D-12BE3DB55A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6A86D9-4C05-4AFD-BE2D-12BE3DB55A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6A86D9-4C05-4AFD-BE2D-12BE3DB55A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6A86D9-4C05-4AFD-BE2D-12BE3DB55A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {469B388A-B6BE-443C-A42F-01BDD4F9EA7B}
+	EndGlobalSection
+EndGlobal
