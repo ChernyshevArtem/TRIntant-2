@@ -30,7 +30,7 @@ namespace TRIntant2
         public void SaveToTXT(string date)
         {
             GreateDirectoryQuestionnaire();
-
+            
             string pathSave = Path.ChangeExtension(Path.Combine(_pathDirectory, _extractФИО.Match(date).Groups[1].ToString()), ".txt");
 
             pathSave = CheckPathSave(pathSave);
@@ -82,15 +82,23 @@ namespace TRIntant2
         public void PrintNameFilesCreatedToday()
         {
             GreateDirectoryQuestionnaire();
-            var todayFiles = Directory.GetFiles(_pathDirectory, "*.txt").Where(x => new FileInfo(x).CreationTime.Date == DateTime.Today.Date);
-            if (todayFiles.Count() == 0)
+            try
             {
-                Console.WriteLine("Файлов созданных сегодня не найдено");
+                var todayFiles = Directory.GetFiles(_pathDirectory, "*.txt").Where(x => new FileInfo(x).CreationTime.Date == DateTime.Today.Date);
+                if (todayFiles.Count() == 0)
+                {
+                    Console.WriteLine("Файлов созданных сегодня не найдено");
+                }
+                else
+                {
+                    Console.WriteLine("Названия файлов, созданных сегодня:");
+                    Console.WriteLine(string.Join("\n", (todayFiles.Select(f => Path.GetFileNameWithoutExtension(f)))));
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Названия файлов, созданных сегодня:");
-                Console.WriteLine(string.Join("\n", (todayFiles.Select(f => Path.GetFileNameWithoutExtension(f)))));
+                Console.WriteLine(ex.Message);
             }
         }
         public void PrintNameAllFiles(int pageNumber)
